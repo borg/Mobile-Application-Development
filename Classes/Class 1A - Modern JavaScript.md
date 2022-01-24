@@ -33,6 +33,8 @@ Today, you can accomplish more than was imaginable 10 years ago, using only Java
 
 > All these languages can be replaced with Modern JavaScript.
 
+The reason this works is not because those languages aren't useful or in use (although some are historical artifacts), but because someone that knows them has gone through the trouble of wrapping them and translate them to JavaScript.
+
 There is a whole ecology of frameworks and packages that are largely compatible, available for free and require you to mainly know just one programming language. And that is why you are so very lucky.
 
 
