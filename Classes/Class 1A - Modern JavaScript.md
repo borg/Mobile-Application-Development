@@ -63,25 +63,12 @@ Because JS is an old language, there is a lot of legacy syntax around, and it's 
 ### Some Modern JavaScript (ES6-ES9) features to know
 
 ```  
-* class extends 
 * for ... in / for ... of  
 * arrow functions
 * let (local declaration)  
-* async/await promises  
-* ...obj spread
 ```
 
-[Scoping rules, difference between let and var](https://stackoverflow.com/questions/762011/whats-the-difference-between-using-let-and-var)
-
-#### JavaScript Classes and Object-oriented programming
-
-[Classes and class extensions example from class](https://github.com/BarakChamo/Mobile-Application-Development/blob/master/Classes/examples/classes-and-extensions.js) 
-
-- [JavaScript Classes on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
-- [Class extensions on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/extends)
-- [Context, binding and arrow functions explained](https://www.codementor.io/dariogarciamoya/understanding-this-in-javascript-with-arrow-functions-gcpjwfyuc)
-
-
+- [Scoping rules, difference between let and var](https://stackoverflow.com/questions/762011/whats-the-difference-between-using-let-and-var)
 
 
 

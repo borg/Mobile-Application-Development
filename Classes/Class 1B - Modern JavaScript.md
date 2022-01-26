@@ -13,7 +13,6 @@ Because JS is an old language, there is a lot of legacy syntax around, and it's 
 * async/await promises  
 * destructuring objects {prop1,prop2}
 * ...obj spread
-* map
 * import vs require
 ```
 
