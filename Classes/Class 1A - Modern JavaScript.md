@@ -71,6 +71,8 @@ Because JS is an old language, there is a lot of legacy syntax around, and it's 
 * ...obj spread
 ```
 
+[Scoping rules, difference between let and var](https://stackoverflow.com/questions/762011/whats-the-difference-between-using-let-and-var)
+
 #### JavaScript Classes and Object-oriented programming
 
 [Classes and class extensions example from class](https://github.com/BarakChamo/Mobile-Application-Development/blob/master/Classes/examples/classes-and-extensions.js) 
@@ -78,34 +80,6 @@ Because JS is an old language, there is a lot of legacy syntax around, and it's 
 - [JavaScript Classes on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
 - [Class extensions on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/extends)
 - [Context, binding and arrow functions explained](https://www.codementor.io/dariogarciamoya/understanding-this-in-javascript-with-arrow-functions-gcpjwfyuc)
-
-
-### Sharing code between files - require (CommonJS) vs import (ES6)?
-NodeJS (<v13) uses CommonJS, ie. 
-
-[require & import example](https://codesandbox.io/s/quizzical-currying-bonxi?file=/src/App.js)
-
-
-```require
-File1.js
-module.exports = {dada:'dada'};
-
-File2.js
-const doda = require('./File1');
-console.log(doda.dada);
-```
-
-React is using mainly import   
-
-```
-File3.js
-export default {dada:'dada'};
-
-File4.js
-import doda from './File3';
-console.log(doda.dada);
-```
-but require is still used in RN, expecially when including files and images. Also, if you need to share components with a NodeJS backend that doesn't support ES6 imports, you may need to rewrite them as CommonJS.
 
 
 
@@ -148,7 +122,7 @@ Install expo-cli.
 
 ```npm install --global expo-cli```
 
-7\. Download [Xcode](https://developer.apple.com/documentation/xcode)
+7\. If you are on Mac, download [Xcode](https://developer.apple.com/documentation/xcode)
 
 Install Xcode commandline tools   
 ```xcode-select –install```
