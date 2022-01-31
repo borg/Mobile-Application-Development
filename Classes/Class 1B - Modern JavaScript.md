@@ -64,6 +64,10 @@ console.log(doda.dada);
 ```
 but `require` is still used in RN, expecially when including files and images. Also, if you need to share components with a NodeJS backend that doesn't support ES6 imports, you may need to rewrite them as CommonJS.
 
+###Resources   
+[string methods](https://www.w3schools.com/js/js_string_methods.asp)   
+[loops](https://www.w3schools.com/js/js_loop_forof.asp)   
+
 ### Assignment
 1. `fork` a version of [this](https://codesandbox.io/s/angry-lake-bud0c?file=/src/App.js) sandbox
 2. Load 10 random words from `"https://random-word-api.herokuapp.com/word?number=10"` using `async fetch` call
