@@ -110,10 +110,12 @@ Each element can only contain one container tag. It's ok to use fragment <> to a
 ```
 
 #### JSX conditional rendering
+First type of conditional 
 
 ```
 {condition && <Tag/>}
 ```
+Second type of conditional
 
 ```
 {isA?(
@@ -122,6 +124,10 @@ Each element can only contain one container tag. It's ok to use fragment <> to a
 <B/>
 )}
 ```
+
+[Here](https://codesandbox.io/s/conditional-rendering-4tg4m) is the example of conditional rendering we worked with in class, the Red, Blue and Green boxes.
+
+And [here](https://codesandbox.io/s/words-as-react-jmd92) is another example from class, using `isLoading` as conditional rendering for the loaded 10 words.
 
 
 #### Resources
