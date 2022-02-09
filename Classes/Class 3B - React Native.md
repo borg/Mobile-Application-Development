@@ -15,11 +15,13 @@ SafeAreaView (iOS)
 
 ### flex
 
-`flexDirection` controls the direction in which the children of a node are laid out. This is also referred to as the main axis. 
+`flexDirection` controls the direction in which the children of a node are laid out. This is also referred to as the main axis. Flexbox is (aside from optional wrapping) a single-direction layout concept. Think of flex items as primarily laying out either in horizontal rows or vertical columns.
 
 `justifyContent` describes how to align children within the main axis of their container.
 
 `alignItems` describes how to align children along the cross axis of their container.
+
+`alignContent` defines the distribution of lines along the cross-axis.
 
 With `flexDirection:'column'` (default), to align items horizontally use ` alignItems: 'center'`, and vertically `justifyContent:flex-start/center/space-between/flex-end`
 
