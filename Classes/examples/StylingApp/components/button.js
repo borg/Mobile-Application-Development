@@ -12,7 +12,9 @@ const Button = (props) => {
     if(props.disabled) stateStyle = buttonStyle.disabled
 
     return (
-    <TouchableOpacity disabled={props.disabled} style={[buttonStyle.button, stateStyle]}>
+    <TouchableOpacity disabled={props.disabled} style={[buttonStyle.button, stateStyle]} 
+        onPress={props.onPress}
+    >
         <Text style={textStyle.main}>
             {props.label}
         </Text>

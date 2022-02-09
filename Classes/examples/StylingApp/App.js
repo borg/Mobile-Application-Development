@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import {Component} from 'react';
-import { StyleSheet, Text, View,SafeAreaView,Dimensions } from 'react-native';
+import { Image,StyleSheet, Text, View,SafeAreaView,Dimensions,TouchableHighlight} from 'react-native';
 const { height, width } = Dimensions.get("screen");
 
 
@@ -12,18 +12,21 @@ import { textStyle } from './styles'
 
 
 export default class App extends Component {
-
+  state = {
+    clicked:"NO"
+  }
 
   onPress(){
-
+    this.setState({clicked:'YES'})
   }
 
   render(){
+    const {clicked} = this.state;
   return (
     <SafeAreaView style={styles.container}>
 
 
-      <Text style={[textStyle.main, textStyle.heading]}>Amazing App!</Text>
+      <Text style={[textStyle.main, textStyle.heading]}>Is clicked: {clicked}</Text>
 
 
 
@@ -40,17 +43,23 @@ export default class App extends Component {
       </View>
 
 
-
-      <Button warning label="My Button" />
-      <Button error label="My Button" />
-      <Button valid label="My Button" />
-      <Button disabled label="My Button" />
+      <Button warning onPress={()=>{this.onPress()}} label="My Button" />
+      <Button error label="My Button" onPress={()=>{this.onPress()}}  />
+      <Button valid label="My Button" onPress={()=>{this.onPress()}} />
+      <Button disabled label="My Button" onPress={()=>{this.onPress()}} />
       <Button label="My Button" />
-      <Button focus label="My Button" />
+      <Button focus label="My Button" onPress={()=>{this.onPress()}}  />
 
       <Footer error label="Footer text" />
 
 
+        <View style={styles.logo}>
+          <TouchableHighlight onPress={()=>{
+            console.log("pressed");
+          }}>
+          <Image  source={{uri: 'https://reactjs.org/logo-og.png'}} style={{ width: 40, height: 40 }}/>
+          </TouchableHighlight>
+        </View>
     </SafeAreaView>
   );
   }
@@ -75,9 +84,9 @@ const styles = StyleSheet.create({
     width:250,
     height:250,
     backgroundColor: "aliceblue",
-    justifyContent:'space-between',//flex-start | flex-end | center | space-between | space-around | space-evenly | start | end | left | right
-   // flexDirection: "row",//row | row-reverse | column | column-reverse
-    alignItems: 'center',//vertical if row
+    justifyContent:'flex-start',//'space-between',//flex-start | flex-end | center | space-between | space-around | space-evenly | start | end | left | right
+    flexDirection: "row",//row | row-reverse | column | column-reverse
+    //alignItems: 'center',//vertical if row
    // justifyContent: 'center',
   },
   button: {
@@ -108,4 +117,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     fontSize: 24,
   },
+  logo:{
+    margin:20
+  }
 });
