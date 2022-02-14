@@ -126,6 +126,6 @@ For a more in depth discussion (which applies more to react native than expo), r
 
 
 ### Resources
-- [`react-navigation` documentation](https://reactnavigation.org/docs/en/headers.html)
+- [`react-navigation` documentation](https://reactnavigation.org/docs/getting-started/)
 
 - [Using the Navigator's headers](https://reactnavigation.org/docs/en/headers.html)
