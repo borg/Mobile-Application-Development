@@ -9,3 +9,4 @@ Course material for Mobile Application Development, Integrated Digital Media, Ta
 #### [Class 3A - React Native](https://github.com/borg/Mobile-Application-Development/blob/master/Classes/Class%203A%20-%20React%20Native.md)  
 #### [Class 3B - React Native](https://github.com/borg/Mobile-Application-Development/blob/master/Classes/Class%203B%20-%20React%20Native.md)
 #### [Class 4A - Navigation and Structure](https://github.com/borg/Mobile-Application-Development/blob/master/Classes/Class%204A%20-%20Navigation%20and%20Structure.md)
+#### [Class 5A - Global State & Local Storage](https://github.com/borg/Mobile-Application-Development/blob/master/Classes/Class%205%20-%20Global%20State.md)
