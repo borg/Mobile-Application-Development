@@ -49,7 +49,7 @@ This is a coding class, so it's not enough to just make pretty pictures. A proto
 
 Also, feel free to present several prototypes, where you perhaps explore one of the possible frameworks above in each. It is often good coding practice to break down large problems into smaller pieces. 
 
-
+*The prototype(s) should be submitted in the form of a public git repo that should build locally without errors.*
 
 ## Other considerations
 I also want you to consider:   
