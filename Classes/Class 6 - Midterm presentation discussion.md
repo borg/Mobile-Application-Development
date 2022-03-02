@@ -2,7 +2,7 @@
 
 Making an app is a lot more than knowing how to code, it's about having a clear idea about what you want to achieve, and figuring out the most effective way of getting there.
 
-For the remaineder of this class you are going to work primarily on your own projects, and I will support and coach you in the process of conceptualizing and building your app.
+For the remainder of this course you are going to work primarily on your own projects, and I will support and coach you in the process of conceptualizing and building your app.
 
 The midterm presentation should be in the format of    
 1. a pitch deck   
