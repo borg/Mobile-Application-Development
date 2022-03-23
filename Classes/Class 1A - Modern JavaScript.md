@@ -109,6 +109,8 @@ Install expo-cli.
 
 ```npm install --global expo-cli```
 
+Install [React Native following this](https://reactnative.dev/docs/environment-setup)   
+
 7\. If you are on Mac, download [Xcode](https://developer.apple.com/documentation/xcode)
 
 Install Xcode commandline tools   
