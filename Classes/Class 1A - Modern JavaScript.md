@@ -114,3 +114,7 @@ Install expo-cli.
 Install Xcode commandline tools   
 ```xcode-select –install```
 
+8\. On Mac, install `cocoapods` and `ruby` (if missing)   
+[Ruby](https://stackify.com/install-ruby-on-your-mac-everything-you-need-to-get-going/)   
+[cocoapods](https://guides.cocoapods.org/using/getting-started.html)
+
