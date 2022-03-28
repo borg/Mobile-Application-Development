@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>829522914628-mfjenv9ml4f8l9k3flrl8ofct45drhr7.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.829522914628-mfjenv9ml4f8l9k3flrl8ofct45drhr7</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBHOV9xiJJehERH9GVdIOMF3HBQcGz9CPc</string>
+	<key>GCM_SENDER_ID</key>
+	<string>829522914628</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>to.elevated.fb-demo</string>
+	<key>PROJECT_ID</key>
+	<string>fir-afdef</string>
+	<key>STORAGE_BUCKET</key>
+	<string>fir-afdef.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:829522914628:ios:1e53915cefd8b689e87b11</string>
+</dict>
+</plist>
