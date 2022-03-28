@@ -12,9 +12,8 @@ Course material for Mobile Application Development, Integrated Digital Media, Ta
 #### [Class 5A - Global State & Local Storage](https://github.com/borg/Mobile-Application-Development/blob/master/Classes/Class%205%20-%20Global%20State.md)
 #### [Class 5B - Hooks](https://github.com/borg/Mobile-Application-Development/blob/master/Classes/Class%205B%20-%20Hooks.md)
 #### [Class 6 - Midterm presentation](https://github.com/borg/Mobile-Application-Development/blob/master/Classes/Class%206%20-%20Midterm%20presentation%20discussion.md)
-
 #### [Class 7A - Firebase App with Google Sign in](https://github.com/borg/Mobile-Application-Development/blob/master/Classes/Class%207A%20-%20Firebase%20App.md)
-https://github.com/borg/Mobile-Application-Development/blob/master/Classes/Class%207%20-%20Firebase%20App.md
+
 
 
 
