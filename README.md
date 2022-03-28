@@ -13,7 +13,8 @@ Course material for Mobile Application Development, Integrated Digital Media, Ta
 #### [Class 5B - Hooks](https://github.com/borg/Mobile-Application-Development/blob/master/Classes/Class%205B%20-%20Hooks.md)
 #### [Class 6 - Midterm presentation](https://github.com/borg/Mobile-Application-Development/blob/master/Classes/Class%206%20-%20Midterm%20presentation%20discussion.md)
 
-
+#### [Class 7A - Firebase App with Google Sign in](https://github.com/borg/Mobile-Application-Development/blob/master/Classes/Class%207A%20-%20Firebase%20App.md)
+https://github.com/borg/Mobile-Application-Development/blob/master/Classes/Class%207%20-%20Firebase%20App.md
 
 
 
@@ -37,7 +38,7 @@ Course material for Mobile Application Development, Integrated Digital Media, Ta
 
 [03.02.22, 03.07.22] 	Class 6: Midterm presentation lab & UX libraries
 
-[03.09.22, - ] 		Class 7: Dev support
+[03.09.22, - ] 		Dev support
 
 [03.14.22 - 03.20.22] 	Spring break
 
@@ -45,18 +46,18 @@ Course material for Mobile Application Development, Integrated Digital Media, Ta
 
 #### Part III:  Advanced Concepts
 
-[03.28.22, 03.30.22]  Class 8: Database integration
+[03.28.22, 03.30.22]  Class 7: Database integration
 
-[04.04.22, 04.06.22] Class 9: User Authentication
+[04.04.22, 04.06.22] Class 8: User Authentication
 
-[04.11.22, 04.13.22] Class 10: Animations
+[04.11.22, 04.13.22] Class 9: Animations
 
-[04.18.22, 04.20.22] Class 11: Looking under the hood in Xcode
+[04.18.22, 04.20.22] Class 10: Looking under the hood in Xcode
 
 #### Part IV:  Building, packaging, shipping
 
-[04.25.22, 04.27.22] Class 12: Building and releasing mobile apps
+[04.25.22, 04.27.22] Class 11: Building and releasing mobile apps
 
-[05.02.22, 05.04.22] Class 13: Final project proposal review
+[05.02.22, 05.04.22] Class 12: Final project proposal review
 
 #### [05.09.22] Final project presentations
