@@ -3,7 +3,9 @@ import { Button, Text, View, Image,StyleSheet,Pressable} from 'react-native';
 import {Theme, globalStyle} from '../styles/Theme';
 import {asGlobalState,setGlobalState,addGlobalStateListener,removeGlobalStateListener} from '../common/globalState';
 
-import { GoogleSignup, GoogleSignupButton,statusCodes } from '@react-native-google-signin/google-signin';
+
+import auth from '@react-native-firebase/auth';
+import { GoogleSignin,statusCodes } from '@react-native-google-signin/google-signin';
 
 const GoogleBtnImg = require('../assets/btn_signin_google.png');
 import * as ggl from './GoogleConfig';
@@ -21,16 +23,23 @@ export default class  Screen extends Component {
         removeGlobalStateListener("user",this);
     }
 
-
+    //notice that signUp and signIn methods are the same
     async signUp  () {
-
-        setGlobalState({user:{name:"Bob"}});
-
-        return;
+        
+        
         try {
-          await GoogleSignup.hasPlayServices();
-          const userInfo = await GoogleSignup.signIn();
-          //this.setState({ userInfo });
+          await GoogleSignin.hasPlayServices();
+          const userInfo = await GoogleSignin.signIn();
+          
+          console.log(userInfo);
+          const googleCredential = auth.GoogleAuthProvider.credential(userInfo.idToken);
+          console.log("googleCredential",googleCredential);
+ 
+          let res = await auth().signInWithCredential(googleCredential);
+ 
+          console.log("res",res);
+
+          
         } catch (error) {
           if (error.code === statusCodes.SIGN_IN_CANCELLED) {
             // user cancelled the login flow
@@ -41,7 +50,12 @@ export default class  Screen extends Component {
           } else {
             // some other error happened
           }
+          console.log(error.message);
+          return;
         }
+
+        //this will cause a render and the authenticated user will exist for react navigator
+        setGlobalState({user:auth().currentUser});
       };
 
       

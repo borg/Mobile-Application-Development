@@ -24,7 +24,7 @@ export default class  Screen extends Component {
         removeGlobalStateListener("user",this);
     }
 
-
+    //notice that signUp and signIn methods are the same
     async signIn  () {
 
         try {
@@ -32,22 +32,37 @@ export default class  Screen extends Component {
           const userInfo = await GoogleSignin.signIn();
 
           console.log(userInfo);
+
+          const googleCredential = auth.GoogleAuthProvider.credential(userInfo.idToken);
+          
+          console.log("googleCredential",googleCredential);
+
+          let res = await auth().signInWithCredential(googleCredential);
+
+          console.log("res",res);
+
           //this.setState({ userInfo });
         } catch (error) {
           if (error.code === statusCodes.SIGN_IN_CANCELLED) {
             // user cancelled the login flow
+            console.log("SIGN_IN_CANCELLED");
           } else if (error.code === statusCodes.IN_PROGRESS) {
             // operation (e.g. sign in) is in progress already
+            console.log("IN_PROGRESS");
           } else if (error.code === statusCodes.PLAY_SERVICES_NOT_AVAILABLE) {
             // play services not available or outdated
           } else {
             // some other error happened
           }
+          return;
         }
+        //this will cause a render and the authenticated user will exist for react navigator
+        setGlobalState({user:auth().currentUser});
     };
 
     async signOut(){
-        setGlobalState({user:null});
+      await auth().signOut();
+      setGlobalState({user:null});
     }
       
 

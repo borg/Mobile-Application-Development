@@ -88,7 +88,7 @@ Still not over yet!
 
 ![](./images/firebase_10.png)
 
-To figure this one goto [Google Developer Console](https://console.cloud.google.com/)
+To figure this one goto [Google Developer Console](https://console.cloud.google.com/apis/dashboard)
 ![](./images/firebase_11.png)
 
 ![](./images/firebase_13.png)
@@ -122,12 +122,20 @@ GoogleSignin.configure({
 The result
 ![](./images/firebase_9.png)
 
+One final step needed to link firebase with google sign in. 
+
+Inside your [firebase app](https://console.firebase.google.com/u/0/project/fir-afdef/authentication/providers), select the Google sign in method, and copy the Client ID from the Google API into firebase.
+
+![](./images/firebase_14.jpg)
+
+
+Now the Google Social Sign in should be linked to your Firebase App, and when a user signs in their account is either created or authenticated with firebase.
 
 ### Resources
 
 [React native] (https://reactnative.dev/docs/environment-setup)    
 [React Navigation](https://reactnavigation.org/docs/getting-started/)   
 [Firebase Console](https://console.firebase.google.com/)   
-[Google Developer Console](https://console.cloud.google.com/)
+[Google Developer Console](https://console.cloud.google.com/apis/dashboard)   
 [React Native Firebase](https://rnfirebase.io/)      
 [react-native-google-signin](https://github.com/react-native-google-signin/google-signin)

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Pressable, View, Text, Button } from 'react-native';
+import { Pressable, View, Text, Button,LogBox } from 'react-native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
@@ -19,7 +19,7 @@ const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
 
 
-
+LogBox.ignoreAllLogs();//use with caution
 
 class TodoStack extends Component{
   state={
@@ -94,10 +94,12 @@ const AuthedStack = () =>{
           
           
           >
+
+          <Tab.Screen name="Home" component={HomeScreen}  />
           <Tab.Screen name="User" component={SignInScreen} options = {{}} />
 
           <Tab.Screen name="Todos" component={TodoStack} options = {{}} />
-          <Tab.Screen name="Home" component={HomeScreen}  />
+         
 
         </Tab.Navigator>
   )
@@ -129,7 +131,7 @@ export default class App extends Component {
           <AuthedStack/>
         ):(
           <OnboardingStack/>
-          )}
+        )}
       </NavigationContainer>
     );
   }

@@ -6,31 +6,28 @@ import {asGlobalState,setGlobalState,addGlobalStateListener,removeGlobalStateLis
 export default class  HomeScreen extends Component {
 
     state={
-        todos: asGlobalState('todos',[]) 
+        user: asGlobalState('user',null) 
     }
         //ensure you add this component as listener to global state
     componentDidMount(){
-        addGlobalStateListener("todos",this);
+        addGlobalStateListener("user",this);
     }
     //ensure you remove the listener when unmounted
     componentWillUnmount(){
-        removeGlobalStateListener("todos",this);
+        removeGlobalStateListener("user",this);
     }
 
   render(){
     const {navigation} = this.props;
-    const {todos} = this.state;
+    const {user} = this.state;
 
     return (
       <View style={globalStyle.container}>
         <View style={globalStyle.block}>
           <Text style={globalStyle.paragraph}>
-           Here is your stuff
+           Hey there {user.displayName}!!
           </Text>
 
-
-
-          
         </View>
       </View>
     );

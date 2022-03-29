@@ -200,7 +200,7 @@ const globalStyle = StyleSheet.create({
   },
   paragraph:{
     ...Theme.HEADER_2,
-    color:Theme.COLORS.PLUM_BLUE,
+    color:Theme.COLORS.CHERRY,
     margin: 8,
   },
   block:Theme.BLOCK_CONTAINER,
