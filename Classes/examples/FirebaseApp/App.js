@@ -7,13 +7,14 @@ import { NavigationContainer } from '@react-navigation/native';
 
 import {asGlobalState,setGlobalState,addGlobalStateListener,removeGlobalStateListener} from './common/globalState';
 
-
+import auth from '@react-native-firebase/auth';
 
 import SignInScreen from './screens/SignInScreen';
 import SignUpScreen from './screens/SignUpScreen';
 import HomeScreen from './screens/HomeScreen';
 import TodoScreen from './screens/TodoScreen';
 import TodoDetailScreen from './screens/TodoDetailScreen';
+import GalleryScreen from './screens/GalleryScreen';
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -99,7 +100,7 @@ const AuthedStack = () =>{
           <Tab.Screen name="User" component={SignInScreen} options = {{}} />
 
           <Tab.Screen name="Todos" component={TodoStack} options = {{}} />
-         
+          <Tab.Screen name="Gallery" component={GalleryScreen} options = {{}} />
 
         </Tab.Navigator>
   )
@@ -111,8 +112,14 @@ export default class App extends Component {
     user: asGlobalState('user',null) 
   }
       //ensure you add this component as listener to global state
-  componentDidMount(){
+  async componentDidMount(){
       addGlobalStateListener("user",this);
+
+
+      //added initial check auth
+      if(auth().currentUser){
+        setGlobalState({user:auth().currentUser});
+      }
   }
   //ensure you remove the listener when unmounted
   componentWillUnmount(){

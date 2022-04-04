@@ -34,7 +34,7 @@ export default class  Screen extends Component {
           console.log(userInfo);
           const googleCredential = auth.GoogleAuthProvider.credential(userInfo.idToken);
           console.log("googleCredential",googleCredential);
- 
+          console.log("here");
           let res = await auth().signInWithCredential(googleCredential);
  
           console.log("res",res);

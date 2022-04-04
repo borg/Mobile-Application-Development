@@ -4,7 +4,7 @@ import { StyleSheet, Text, View,Button,TouchableOpacity,TextInput,SafeAreaView} 
 import {Theme, globalStyle} from '../styles/Theme';
 import {asGlobalState,setGlobalState,addGlobalStateListener,removeGlobalStateListener} from '../common/globalState';
 import TodoItem from '../components/TodoItem';
-
+import firestore from '@react-native-firebase/firestore';
 
 const Separator = () => (
   <View style={globalStyle.separator} />
@@ -17,16 +17,49 @@ export default class TodoScreen extends Component {
     todos: asGlobalState('todos',[]) 
   };
 
-      //ensure you add this component as listener to global state
-    componentDidMount(){
-        addGlobalStateListener("todos",this);
-    }
-    //ensure you remove the listener when unmounted
-    componentWillUnmount(){
-        removeGlobalStateListener("todos",this);
-    }
+    //ensure you add this component as listener to global state
+  async componentDidMount(){
+      addGlobalStateListener("todos",this);
 
-  addTodo(){
+      await this.loadRemoteData();
+  }
+  //ensure you remove the listener when unmounted
+  componentWillUnmount(){
+      removeGlobalStateListener("todos",this);
+  }
+
+  async loadRemoteData(){
+    const todos = await firestore().collection('app').doc('todos').get() 
+    .then(documentSnapshot => {
+      //console.log('Todos exists: ', documentSnapshot.exists);
+  
+      if (documentSnapshot.exists) {
+        const todos = documentSnapshot.data();
+        //console.log('Todos data: ', todos.data);
+        setGlobalState({todos:todos.data});
+      }
+    });
+
+  }
+
+  async saveRemoteData(){
+    let {todos} = this.state;
+
+    try{
+      firestore()
+      .collection('app')
+      .doc('todos')
+      .set({data:todos})
+      .then(() => {
+        console.log('Todos saved');
+      });
+    }
+    catch(e){
+      console.log(e.message);
+    }
+  }
+
+  async addTodo(){
     const {currentBody,currentTitle} = this.state;
     if(currentTitle.length==0){
       return;
@@ -42,11 +75,15 @@ export default class TodoScreen extends Component {
     }
 
     todos.push(item);
-    this.setState({currentTitle:'',currentBody:''});
+
     setGlobalState({todos});
+
+    this.setState({currentTitle:'',currentBody:''},async()=>{
+      await this.saveRemoteData();
+    });
   }
 
-  setDone(item, v){
+  async setDone(item, v){
     let {todos} = this.state;
     for(let i in todos){
       let itm = todos[i];
@@ -55,13 +92,21 @@ export default class TodoScreen extends Component {
       }
 
     }
-  console.log("set done",item)
+
     //this.setState({todos});
-    setGlobalState({todos});
+    setGlobalState({todos});//missing callback here...not ideal
+
+    await this.saveRemoteData();
+  }
+
+  async clearList(){
+    setGlobalState({todos:[]});
+    await this.saveRemoteData();
   }
 
   render(){
     const {todos,currentBody,currentTitle} = this.state;
+
     const { navigation, route} = this.props;
 
     return (
@@ -73,6 +118,7 @@ export default class TodoScreen extends Component {
         {
             todos.map((e,index)=>{
              return( <TodoItem 
+             key={index}
              item={e} 
              navigation={navigation}
              onPress={(item,value)=>{
@@ -99,7 +145,7 @@ export default class TodoScreen extends Component {
           multiline={true}
           numberOfLines={5}
 
-          style={{...globalStyle.input,height:80,border:'#000 solid 1px',width:'90%',marginLeft:15}}
+          style={{...globalStyle.input,height:80,width:'90%',marginLeft:15}}
           value={currentBody}
           onChangeText={(txt)=>{
 
@@ -119,7 +165,7 @@ export default class TodoScreen extends Component {
 
             <TouchableOpacity
             onPress={()=>{
-                this.setState({todos:[]});
+                this.clearList();
               }}
               style={globalStyle.roundButton}>
             <Text>Clear list</Text>
