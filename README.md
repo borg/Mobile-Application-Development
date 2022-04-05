@@ -13,6 +13,8 @@ Course material for Mobile Application Development, Integrated Digital Media, Ta
 #### [Class 5B - Hooks](https://github.com/borg/Mobile-Application-Development/blob/master/Classes/Class%205B%20-%20Hooks.md)
 #### [Class 6 - Midterm presentation](https://github.com/borg/Mobile-Application-Development/blob/master/Classes/Class%206%20-%20Midterm%20presentation%20discussion.md)
 #### [Class 7A - Firebase App with Google Sign in](https://github.com/borg/Mobile-Application-Development/blob/master/Classes/Class%207A%20-%20Firebase%20App.md)
+#### [Class 8A - Firebase storing data and images](https://github.com/borg/Mobile-Application-Development/blob/master/Classes/Class%208A%20-%20Firebase%20Continued.md)
+
 
 
 
@@ -45,9 +47,9 @@ Course material for Mobile Application Development, Integrated Digital Media, Ta
 
 #### Part III:  Advanced Concepts
 
-[03.28.22, 03.30.22]  Class 7: Database integration
+[03.28.22, 03.30.22]  Class 7: User Authentication
 
-[04.04.22, 04.06.22] Class 8: User Authentication
+[04.04.22, 04.06.22] Class 8: Database integration
 
 [04.11.22, 04.13.22] Class 9: Animations
 

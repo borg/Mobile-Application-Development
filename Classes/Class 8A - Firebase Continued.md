@@ -30,8 +30,13 @@ cd ios/ && pod install && cd ..
 yarn ios
 ```
 
+To access photos on the iPhone you need to add these flags to `Xcode>info.plist`
 ![](./images/firebase_15.jpg)
+
+To allow upload to storage you need to unlock it.
 ![](./images/firebase_16.jpg)
+
+If you have troubles loading urls, this might be the reason. Enable Arbitrary Loads in `Xcode>info.plist`
 ![](./images/firebase_17.jpg)
 
 ### Resources
